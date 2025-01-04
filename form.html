@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maravilha | Acampamento</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container py-base">
+      <nav class="flex items-center gap-1.5">
+        <a href="/">
+          <img src="assets/ISPMico.ico" alt="Zingen">
+        </a>
+        <a href="/" class="desketop-only">Sobre o acampamento</a>
+        <a href="/" class="desketop-only">Atrativos</a>
+        <a href="/" class="desketop-only">Preços</a>
+      </nav>
+    </div>
+  </header>
+  <section class="form">
+    <div class="container">
+      <form action="" method="POST" enctype="multipart/form-data">
+        <h1>Formulário de inscrição</h1>
+        <p>Preencha os dados abaixo para inscrever-se  na excursão do instituto maravilha de Benguela.</p>
+        <fieldset class="child-info">
+          <legend>Dados pessoais</legend>
+          <div class="input-wrapper">
+              <label for="nbi">Nº BI</label>
+              <input id="nbi" type="text" name="nbi" placeholder="Qual é o BI">
+          </div>
+          <div class="input-wrapper">
+              <label for="fullname">Nome Completo</label>
+              <input id="fullname" type="text" name="fullname" placeholder="Qual nome completo">
+          </div>
+          <div class="input-wrapper">
+            <label for="birth">Data de nascimento</label>
+            <input type="date" name="birth" id="birth" lang="pt-br">
+          </div>
+          <div class="input-wrapper">
+            <label for="gener">Género</label>
+            <input id="gener" type="text" name="gener" placeholder="Qual é o seu género">
+        </div>
+       
+        </fieldset>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,9 @@
+#about{
+  background-color: var(--surface-color);
+  & .even-colomns{
+    gap: 2rem;
+  }
+  & img{
+    border-radius: 8px;
+  }
+}

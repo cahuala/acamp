@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maravilha | Acampamento</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container py-base">
+      <nav class="flex items-center gap-1.5">
+        <a href="#">
+          <img src="assets/ISPMico.ico" alt="Zingen">
+        </a>
+        <a href="#about" class="desketop-only">Sobre o acampamento</a>
+        <a href="#features" class="desketop-only">Atrativos</a>
+        <a href="#pricing" class="desketop-only">Preços</a>
+
+        <a href="form.html" class="btn btn-sm">Inscrever-se</a>
+      </nav>
+    </div>
+  </header>
+  <section id="hero">
+      <div class="container py-xl">
+        
+        <h1>Excursão </h1>
+        <p>Imperdível para Malanje</p>
+
+        <div class="flex buttons  items-center gap-1">
+         
+          <a href="form.html" class="btn btn-md">Inscrever-se</a>
+        </div>
+      </div>
+  </section>
+  <section id="smartphones-img">
+    <div class="container">
+      <img src="assets/smartphones.png" alt="Imagem de um telefone">
+    </div>
+  </section>
+  <section id="about">
+    <div class="container even-columns py-xl items-center">
+      <div>
+        <header>
+          <strong>Sobre a excursão</strong>
+          <h2>A excursão perfeita para suas férias</h2>
+          <p>Excursão Imperdível para Malanje*🌴
+            Sob lema: Aventuras em cada passo, o conhecimento é o laço
+            
+            📅 Data: 03 a 07 de Março
+            📍 Destino: Malanje - Explore o melhor da natureza e cultura angolana!</p>
+        </header>
+      </div>
+      <div>
+        <img  class="desketop-only" src="assets/bg-02.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="features">
+    <div class="cards container py-xl grid gap-1.5">
+        <div class="card py-lg px-lg">
+          <img src="assets/icons/MagicWand.svg" alt="">
+          <h3>A maior e melhor excursão!</h3>
+          <p>Prepare-se para uma viagem inesquecível, cheia de aprendizado, diversão e momentos incríveis com seus colegas universitários!</p>
+        </div>
+        <div class="card py-lg px-lg">
+          <div >
+            <img src="assets/icons/GameController.svg" alt="">
+            <h3>Experiência gamificada</h3>
+            <p>Transforme a excursão universitária em uma aventura interativa, com desafios, missões e recompensas que estimulam aprendizado, diversão e trabalho em equipe!</p>
+          </div>
+          <img class="desketop-only" src="assets/Tela 2.png" alt="">
+        </div>
+        <div class="card py-lg px-lg">
+          <img src="assets/icons/MicrophoneStage.svg" alt="">
+          <h3>Grave suas performances</h3>
+          <p>Seja para compartilhar com os amigos ou para acompanhar sua evolução, nosso recurso de gravação de áudio e vídeo permite que você aproveite a experiência ao máximo! </p>
+        </div>
+        <div class="card py-lg px-lg">
+          <div>
+            <img src="assets/icons/UsersThree.svg" alt="">
+            <h3>Compartilhe com a comunidade</h3>
+            <p>Compartilhar com a comunidade é espalhar conhecimento, fortalecer laços e juntos construir um futuro melhor.</p>
+          </div>
+          <img class="desketop-only" src="assets/Tela 1.png" alt="">
+        </div>
+        <div class="card py-lg px-lg">
+          <div >
+            <img src="assets/icons/MusicNotes.svg" alt="">
+            <h3>Conhecimento</h3>
+            <p>O conhecimento na excursão é adquirido a cada descoberta, em cada história contada e na experiência viva de explorar novos lugares, transformando aprendizado em vivência.</p>
+          </div>
+          <img class="desketop-only" src="assets/Tela 3.png" alt="">
+        </div>
+    </div>
+  </section>
+  <section id="pricing">
+    <div class="container py-xl">
+      <header>
+        <strong>Atrativos e preços</strong>
+        <h2>Combinamos os melhores preços com atrações imperdíveis para garantir uma experiência inesquecível e acessível para todos.</h2>
+      </header>
+      <div class="cards even-columns items-center">
+          <div class="card py-lg px-lg">
+            <h3>Atrativos</h3>
+            <p>Baixe o app e comece a cantar agora mesmo!</p>
+            <zin-pricing>Grátis</zin-pricing>
+            <a href="#download" class="btn btn-md" aria-label="Inscrever-se"></a>
+            <div class="separator"></div>
+            <ul role="list" class="grid gap-1">
+              <li>Visita às majestosas quedas de Kalandula</li>
+              <li>Passeio pela Pedra da Pungu a Ndongo</li>
+              <li>Descoberta do rico ecossistema na Reserva Natural de Cangandala</li>
+              <li>Parada no histórico Santuário de Nossa Senhora do Rosário</li>
+            </ul>
+          </div>
+          <div class="premium">
+            <div class="card py-lg px-lg">
+              <span>Individual</span>
+              <h3>Premium</h3>
+              <p>Ideal para quem já cansou de passar férias em casa</p>
+              <zin-pricing>40000,00 <small>/pessoa</small></zin-pricing>
+              <a href="#download" class="btn btn-md">Inscrever-se</a>
+              <div class="separator"></div>
+              <ul role="list" class="grid gap-1">
+                <li>🚌 Transporte confortável de ida e volta</li>
+                <li>🏨 Hospedagem</li>
+                <li>🍽️ Refeições (Café da manhã, almoço e jantar)</li>
+                <li>🎟️ Entradas para todos os pontos turísticos</li>
+                <li>📸 Equipe para registro de fotos e vídeos</li>
+              </ul>
+              <small>Pode ser pago em duas prestações.</small>
+            </div>
+          </div>
+
+          <div class="card py-lg px-lg">
+            <h3>Família</h3>
+            <p>Para aquelas famílias que adoram se reunir pra excursão</p>
+            <zin-pricing>75000,00 <small>/casal</small></zin-pricing>
+            <a href="#" class="btn btn-md" aria-label="Inscrever-se"></a>
+            <div class="separator"></div>
+            <ul role="list" class="grid gap-1">
+              <li>🚌 Transporte confortável de ida e volta</li>
+              <li>🏨 Hospedagem</li>
+              <li>🍽️ Refeições (Café da manhã, almoço e jantar)</li>
+              <li>🎟️ Entradas para todos os pontos turísticos</li>
+              <li>📸 Equipe para registro de fotos e vídeos</li>
+            </ul>
+            <small>Pode ser pago em duas prestações.</small>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  
+</body>
+</html>

@@ -1,0 +1,37 @@
+@import url(fields/index.css);
+form{
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  & label{
+    text-align: left;
+  }
+}
+fieldset{
+  border: none;
+  display: grid;
+  gap: 1.5rem;
+}
+legend{
+  font: 600 1rem/1.25 var(--text-color-secondary);
+  margin-bottom: 1.5rem;
+}
+fieldset + fieldset{
+  margin-top: 3rem;
+}
+.actions-wrapper{
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+}
+@media (width>=80em) {
+  form{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    & label{
+      text-align: left;
+      margin-left: 11.5625rem;
+    }
+  }
+}
