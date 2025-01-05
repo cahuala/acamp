@@ -32,6 +32,9 @@
 .items-center{
   align-items: center;
 }
+.justify-content{
+  justify-content: center;
+}
 .gap-1{
   gap: 1rem;
 }
