@@ -21,10 +21,14 @@
     </div>
   </header>
   <section class="form">
-    <div class="container">
+    
       <form action="" method="POST" enctype="multipart/form-data">
+        <div class="container py-xl">
         <h1>Formulário de inscrição</h1>
         <p>Preencha os dados abaixo para inscrever-se  na excursão do instituto maravilha de Benguela.</p>
+        <div id="msgBI" style="display: none; color: red;" role="alert" >
+          
+         </div>
         <fieldset class="child-info">
           <legend>Dados pessoais</legend>
           <div class="input-wrapper">
@@ -33,24 +37,74 @@
           </div>
           <div class="input-wrapper">
               <label for="fullname">Nome Completo</label>
-              <input id="fullname" type="text" name="fullname" placeholder="Qual nome completo">
+              <input id="fullname" type="text" name="fullname" disabled placeholder="Qual nome completo">
           </div>
           <div class="input-wrapper">
             <label for="birth">Data de nascimento</label>
-            <input type="date" name="birth" id="birth" lang="pt-br">
+            <input type="date" name="birth" id="birth" disabled lang="pt-br">
           </div>
-          <div class="input-wrapper">
-            <label for="gener">Género</label>
-            <input id="gener" type="text" name="gener" placeholder="Qual é o seu género">
+        <div class="input-wrapper">
+          <label for="gender">Género</label>
+          <input name="gender" disabled id="gender">
         </div>
-       
+        <div class="select-wrapper">
+          <label for="course">Curso</label>
+          <select name="course" id="course">
+            <option value="Contabilidade e Auditoria">Contabilidade e Auditoria</option>
+            <option value="Direito">Direito</option>
+            <option value="Economia">Economia</option>
+            <option value="Educação Física e Desporto">Educação Física e Desporto</option>
+            <option value="Engenharia Informática">Engenharia Informática</option>
+            <option value="Ensino de Biologia">Ensino de Biologia</option>
+            <option value="Ensino de Geografia">Ensino de Geográfia</option>
+            <option value="Ensino de História">Ensino de História</option>
+            <option value="Ensino de Sociologia">Ensino de Sociológia</option>
+            <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
+            <option value="Psicologia">Psicologia</option>
+            <option value="Relações Internacionais">Relações Internacionais</option>
+           
+          </select>
+        </div>
+        <div class="select-wrapper">
+          <label for="ano_academico">Ano Acadêmico</label>
+          <select name="ano_academico" id="ano_academico">
+            <option value="1º Ano">1º Ano</option>
+            <option value="2º Ano">2º Ano</option>
+            <option value="3º Ano">3º Ano</option>
+            <option value="4º Ano">4º Ano</option>
+            <option value="5º Ano">5º Ano</option>
+          </select>
+        </div>
         </fieldset>
         <div class="actions-wrapper">
-         
           <button class="btn-primary" type="submit">Fazer inscrição</button>
        </div>
+      </div>
       </form>
-    </div>
   </section>
 </body>
 </html>
+<script>
+	// BUSCAR INFORMAÇÔES DO SEPE
+const bi = document.querySelector('#nbi');
+const fullname = document.querySelector('#fullname')
+const genero = document.querySelector('#gender');
+const birth = document.querySelector('#birth');
+bi.addEventListener("input", async function(event) {
+  if(event.target.value.length > 9) {
+    const result = await fetch("./php/sepeBI.php?bi="+event.target.value)
+    const resposta = await result.json();
+    if(resposta.success ===false) {
+        const msgBI = document.getElementById('msgBI');
+        msgBI.innerHTML="<p>Serviço temporariamente indisponível, Tente mais tarde</p>"
+        msgBI.style.display = "block";
+    }else{
+        fullname.value = resposta.data.nome;
+        genero.value=resposta.data.genero;
+        birth.value = resposta.data.data_nasc;
+
+    }
+
+  }
+});
+</script>

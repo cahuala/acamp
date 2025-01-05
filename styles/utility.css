@@ -10,6 +10,9 @@
 .px-lg{
   padding-inline: var(--px-lg);
 }
+.py-2xl{
+  padding-block: var(--py-xxl);
+}
 
 .container{
   --max-width:375px;
